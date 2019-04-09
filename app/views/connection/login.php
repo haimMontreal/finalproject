@@ -4,7 +4,7 @@
             <div class="card card-body bg-light mt-5" id="div">
                 <h2>Login</h2>
                 <p>Please fill in your credentials to log in</p>
-                <form action="<?php echo URLROOT; ?>/connection/login" method="post" id="student">
+                <form action="<?php echo URLROOT; ?>/users/login" method="post" id="student">
                     <div class="form-group">
                         <label for="email">Email: <sup>*</sup></label>
                         <input type="email" name="email" class="form-control form-control-lg <?php echo (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['email']; ?>">
@@ -25,7 +25,7 @@
                     </div>
                 </form>
 
-                <form action="<?php echo URLROOT; ?>/connection/login" method="post" id="teacher">
+                <form action="<?php echo URLROOT; ?>/users/login" method="post" id="teacher">
                     <div class="form-group">
                         <label for="email">Email: <sup>*</sup></label>
                         <input type="email" name="email" class="form-control form-control-lg <?php echo (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['email']; ?>">
