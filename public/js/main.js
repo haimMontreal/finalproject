@@ -9,6 +9,7 @@ function displayTeacher(){
     document.getElementById('student').style.display='none';
     document.getElementById('teacher').style.display='block';
     document.getElementById("div").className = "card card-body bg-danger mt-5";
+
 }
 
 function displayStudent(){

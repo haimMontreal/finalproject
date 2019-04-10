@@ -9,7 +9,12 @@ class User {
 
     // Login User
     public function login($email, $password){
-        $this->db->query('SELECT * FROM students WHERE email = :email');
+        if(isset($_POST['student'])) {
+            $this->db->query('SELECT * FROM students WHERE email = :email');
+        }
+        elseif (isset($_POST['teacher'])){
+            $this->db->query('SELECT * FROM teachers WHERE email = :email');
+        }
         $this->db->bind(':email', $email);
 
         $row = $this->db->single();
@@ -24,7 +29,13 @@ class User {
 
     // Find user by email
     public function findUserByEmail($email){
-        $this->db->query('SELECT * FROM students WHERE email = :email');
+        if(isset($_POST['student'])) {
+            $this->db->query('SELECT * FROM students WHERE email = :email');
+        }
+        elseif (isset($_POST['teacher'])){
+            $this->db->query('SELECT * FROM teachers WHERE email = :email');
+
+        }
         // Bind value
         $this->db->bind(':email', $email);
 

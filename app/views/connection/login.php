@@ -1,5 +1,6 @@
+
 <?php require APPROOT . '/views/pages/inc/header.php'; ?>
-    <div class="row">
+  <div class="row">
         <div class="col-md-6 mx-auto">
             <div class="card card-body bg-light mt-5" id="div">
                 <h2>Login</h2>
@@ -17,7 +18,7 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <input type="submit" value="Login" class="btn btn-success btn-block">
+                            <input type="submit" name="student" value="Login" class="btn btn-success btn-block">
                         </div>
                         <div class="col">
                             <button class="btn btn-light btn-block" id="teacherClick">Sign in as a teacher</button>
@@ -25,7 +26,7 @@
                     </div>
                 </form>
 
-                <form action="<?php echo URLROOT; ?>/users/login" method="post" id="teacher">
+                <form action="<?php echo URLROOT; ?>/users/login" method="post"  id="teacher">
                     <div class="form-group">
                         <label for="email">Email: <sup>*</sup></label>
                         <input type="email" name="email" class="form-control form-control-lg <?php echo (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['email']; ?>">
@@ -38,7 +39,7 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <input type="submit" value="Login" class="btn btn-success btn-block">
+                            <input type="submit" name="teacher" value="Login" class="btn btn-success btn-block">
                         </div>
                         <div class="col">
                             <button class="btn btn-light btn-block" id="studentClick">Sign in as a student</button>
@@ -49,3 +50,4 @@
         </div>
     </div>
 <?php require APPROOT . '/views/pages/inc/footer.php'; ?>
+
